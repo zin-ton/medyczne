@@ -14,12 +14,14 @@ public class UserRepository
     public Doctor? AddNewDoctor(Doctor doctor)
     {
         var result = _dbContext.Doctors.Add(doctor);
+        _dbContext.SaveChanges();
         return result.Entity;
     }
 
     public Patient? AddNewPatient(Patient patient)
     {
         var result = _dbContext.Patients.Add(patient);
+        _dbContext.SaveChanges();
         return result.Entity;
     }
 
