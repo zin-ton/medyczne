@@ -109,3 +109,4 @@ C:\Users\zhili\RiderProjects\medyczne\medyczne\obj\Debug\net8.0\refint\medyczne.
 C:\Users\zhili\RiderProjects\medyczne\medyczne\obj\Debug\net8.0\medyczne.pdb
 C:\Users\zhili\RiderProjects\medyczne\medyczne\obj\Debug\net8.0\medyczne.genruntimeconfig.cache
 C:\Users\zhili\RiderProjects\medyczne\medyczne\obj\Debug\net8.0\ref\medyczne.dll
+C:\Users\zhili\RiderProjects\medyczne\medyczne\obj\Debug\net8.0\medyczne.sourcelink.json

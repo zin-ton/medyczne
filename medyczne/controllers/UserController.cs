@@ -46,4 +46,6 @@ public class UserController : Controller
         if (registered != null) return Ok(registered);
         return BadRequest();
     }
+
+    
 }
