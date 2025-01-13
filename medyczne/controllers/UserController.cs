@@ -1,5 +1,6 @@
 ﻿using medyczne.Models;
 using medyczne.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace medyczne.controllers;
