@@ -26,7 +26,7 @@ public class VisitController : Controller
     [HttpPost("AdVisitAsPatient")]
     public IActionResult AdVisitAsPatient(Patient patient, int DoctorId, DateTime dateTime)
     {
-        Visit visit = new Visit();
+        Visit visit = null;
         visit.PatientId = patient.Id;
         visit.DoctorId = DoctorId;
         visit.Datetime = dateTime;
