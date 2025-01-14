@@ -69,5 +69,49 @@ public class UserService
 
         return null;
     }
+
+    public Doctor? GetDoctorById(Int64 id)
+    {
+        var doctor = _userRepository.GetDoctorById(id);
+        if (doctor != null)
+        {
+            return doctor;
+        }
+        return null;
+    }
+    public Patient? GetPatientById(Int64 id)
+    {
+        var patient = _userRepository.GetPatientById(id);
+        if (patient != null)
+        {
+            return patient;
+        }
+        return null;
+    }
+    
+    public Doctor? GetDoctorBylogin(String login)
+    {
+        var doctor = _userRepository.GetDoctorByLogin(login);
+        if (doctor != null)
+        {
+            return doctor;
+        }
+        return null;
+    }
+    
+    public Patient? GetPatientByLogin(String login)
+    {
+        var patient = _userRepository.GetPatientByLogin(login);
+        if (patient != null)
+        {
+            return patient;
+        }
+        return null;
+    }
+
+    public List<Doctor>? GetAllDoctors()
+    {
+        return _userRepository.GetAllDoctors();
+    }
     
 }

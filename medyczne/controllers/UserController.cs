@@ -48,5 +48,44 @@ public class UserController : Controller
         return BadRequest();
     }
 
+    [HttpGet("getDoctorById")]
+    public IActionResult getDoctorById(int doctorId)
+    {
+        var result =  _userService.GetDoctorById(doctorId);
+        if (result != null) return Ok(result);
+        return BadRequest();
+    }
+
+    [HttpGet("GetPatientById")]
+    public IActionResult getPatinetById(int patientId)
+    {
+        var result = _userService.GetPatientById(patientId);
+        if (result != null) return Ok(result);
+        return BadRequest();
+    }
+    
+    [HttpGet("getDoctorByLogin")]
+    public IActionResult getDoctorByLogin(String login)
+    {
+        var result =  _userService.GetDoctorBylogin(login);
+        if (result != null) return Ok(result);
+        return BadRequest();
+    }
+
+    [HttpGet("GetPatientByLogin")]
+    public IActionResult getPatinetByLogin(String login)
+    {
+        var result = _userService.GetPatientByLogin(login);
+        if (result != null) return Ok(result);
+        return BadRequest();
+    }
+
+    [HttpGet("GetAllDoctors")]
+    public IActionResult GetAllDoctors()
+    {
+        List <Doctor> result = _userService.GetAllDoctors();
+        return Ok(result);
+    }
+
     
 }
