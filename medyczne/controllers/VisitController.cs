@@ -9,6 +9,11 @@ namespace medyczne.controllers;
 public class VisitController : Controller
 {
     private readonly VisitRepository _visitRepository;
+
+    public VisitController(IConfiguration configuration)
+    {
+        _visitRepository = new VisitRepository(configuration);
+    }
     
     [HttpPost("AdVisitAsDoctor")]
     public IActionResult AdVisitAsDoctor(Doctor doctor, int PatientId, DateTime dateTime)
@@ -26,7 +31,7 @@ public class VisitController : Controller
     [HttpPost("AdVisitAsPatient")]
     public IActionResult AdVisitAsPatient(Patient patient, int DoctorId, DateTime dateTime)
     {
-        Visit visit = null;
+        Visit visit = new Visit();
         visit.PatientId = patient.Id;
         visit.DoctorId = DoctorId;
         visit.Datetime = dateTime;
