@@ -1,4 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
+string allowedOrigin = "*"; // TODO: Change to your allowed origin
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -7,9 +8,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("AllowSpecificOrigin", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.SetIsOriginAllowed(origin => origin == allowedOrigin)
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
